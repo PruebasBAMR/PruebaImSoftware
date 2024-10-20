@@ -1,0 +1,46 @@
+<main class="pt-5 mdb-docs-layout">
+<div class="container  mt-5  px-lg-5">
+  <div class="tab-content">
+    <div class="tab-pane fade in show active">
+
+      <div class="row">
+
+        <div class="col-4">
+          <mdb-form-control>
+            <input mdbInput type="text" id="txtNombre" [(ngModel)]="txtNombre" class="form-control form-control-lg" />
+            <label mdbLabel class="form-label" for="txtNombre">Nombre</label>
+          </mdb-form-control>
+        </div>
+        <div class="col-4">
+          <mdb-form-control>
+            <input mdbInput type="number" id="txtEdad" [(ngModel)]="txtEdad" class="form-control form-control-lg" />
+            <label mdbLabel class="form-label" for="txtEdad">Edad</label>
+          </mdb-form-control>
+        </div>
+        <div class="col-4">
+          <mdb-form-control>
+            <input mdbInput type="email" id="txtEmail" [(ngModel)]="txtEmail" class="form-control form-control-lg" />
+            <label mdbLabel class="form-label" for="txtEmail">Email</label>
+          </mdb-form-control>
+        </div>
+
+      </div>
+
+      <br>
+      <br>
+
+      <div class="row">
+        <div class="col-4">
+          <div class="d-grid gap-2">
+            <button id="btnRegistrar" class="btn btn-primary btn-lg" type="button" (click)="registraPersona()" mdbRipple>Registrar Persona</button>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+</main>
+

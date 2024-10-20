@@ -1,0 +1,28 @@
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<section class="pb-4">
+      <section class="w-100 d-flex align-items-center justify-content-center mb-4" style="height: 30px">
+        <mdb-form-control>
+          <input mdbInput type="number" id="formControlLg" class="form-control form-control-lg"
+          [(ngModel)]="txtPin"
+          />
+          <label mdbLabel class="form-label" for="formControlLg">Pin de acceso</label>
+        </mdb-form-control>
+      </section>
+</section>
+
+<div class="d-grid gap-2 col-2 mx-auto">
+  <button type="button" class="btn btn-success" type="button"
+  (click)="generaToken()"
+  mdbRipple>Enviar</button>
+</div>

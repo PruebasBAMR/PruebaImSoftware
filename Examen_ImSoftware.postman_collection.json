@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "e914ce9d-fb93-4847-bd87-2ccd692e8409",
+		"name": "Examen_ImSoftware",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11782288"
+	},
+	"item": [
+		{
+			"name": "GeneraToken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let resp = pm.response.json();\r",
+							"\r",
+							"if(resp.ok){\r",
+							"    let token = resp.token;\r",
+							"\r",
+							"    pm.environment.set(\"token\", \"Bearer \" + token);\r",
+							"}\r",
+							"else{\r",
+							"    console.log('No se actualizó el token');\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pin\": 12345678\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7255/api/Token/GeneraToken",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7255",
+					"path": [
+						"api",
+						"Token",
+						"GeneraToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPersonas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7255/api/Persona/GetPersonas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7255",
+					"path": [
+						"api",
+						"Persona",
+						"GetPersonas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NuevaPersona",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\t\"Bryan Martinez\",\r\n    \"edad\":\t32,\r\n    \"email\": \"mail@mail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7255/api/Persona/NuevaPersona",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7255",
+					"path": [
+						"api",
+						"Persona",
+						"NuevaPersona"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

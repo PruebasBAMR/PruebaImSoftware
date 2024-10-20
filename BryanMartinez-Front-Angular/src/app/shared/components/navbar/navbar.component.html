@@ -1,0 +1,35 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/personas/home"
+
+    >Personas</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+    <div
+      class="collapse navbar-collapse"
+      id="navbarNav"
+      mdbCollapse
+
+    >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/personas/nuevo" >Nueva Persona</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/personas/registrados">Registrados</a>
+        </li>
+        <!-- <li class="nav-item" routerLink="home/nuevo">Por Capital</li> -->
+        <!-- <li class="nav-item" [routerLink]="['/home/personas/nuevo']">Por Capital</li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
